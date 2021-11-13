@@ -20,8 +20,7 @@ namespace PayrollServicesUsingADO
             {
                 //Creating object for employeemodel and access the fields
                 EmployeeModel employeeModel = new EmployeeModel();
-
-                //Retrieve query
+                
                 string query = @"SELECT * FROM employee_payroll;";
 
                 // define sql command object
@@ -30,7 +29,7 @@ namespace PayrollServicesUsingADO
                 //Open the connection
                 this.sqlconnection.Open();
 
-                //ExecuteReader: Returns data as rows.
+                
                 SqlDataReader reader = sqlCommand.ExecuteReader();
 
                 if (reader.HasRows)

@@ -6,7 +6,7 @@ namespace PayrollServicesUsingADO
 {
     class EmployeeModel
     {
-        //Getter and setter fields(present in db)
+        
         public int EmployeeId { get; set; }
         public string EmployeeName { get; set; }
         public double PhoneNumber { get; set; }

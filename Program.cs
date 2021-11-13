@@ -8,11 +8,14 @@ namespace PayrollServicesUsingADO
         {
             //Console.WriteLine("Welcome to payroll services using ADO");
 
-             EmployeeRepository repository = new EmployeeRepository();
-            Console.WriteLine("Id Name BasicPay Startdate Gender Department PhoneNumber Address Deduction Tax IncomeTax NetPay \n");
-            repository.GetAllEmployee();
+            // EmployeeRepository repository = new EmployeeRepository();
+            //Console.WriteLine("Id Name BasicPay Startdate Gender Department PhoneNumber Address Deduction Tax IncomeTax NetPay \n");
+            //repository.GetAllEmployee();
+           
+          
+            EmployeeRepository repository = new EmployeeRepository();
+            repository.UpdateSalary();
             Console.ReadLine();
-
         }
     }
 }

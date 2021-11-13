@@ -68,6 +68,38 @@ namespace PayrollServicesUsingADO
                 this.sqlconnection.Close();
             }
         }
-    }
 
+        //UC3 Update salary
+        public void UpdateSalary()
+        {
+            try
+            {
+                EmployeeModel employeeModel = new EmployeeModel();
+                this.sqlconnection.Open();
+                string query = @"UPDATE employee_payroll SET BasicPay=3000000 WHERE EmployeeName='Terissa';";
+                SqlCommand command = new SqlCommand(query, sqlconnection);
+
+                int result = command.ExecuteNonQuery();
+                if (result != 0)
+                {
+                    Console.WriteLine("Salary Updated Successfully ");
+                }
+                else
+                {
+                    Console.WriteLine("Salary not updated");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                this.sqlconnection.Close();
+
+            }
+        }
+    }
 }
+
+
